@@ -10,7 +10,7 @@
 <body>
     <h1>Product Inventory Project</h1>
     <p>This is a program that keeps track of how much inventory is left and how much that inventory is worth.</p>
-    <table>
+    <table id="inventoryTable">
         <tr>
             <th>Product ID</th>
             <th>Name</th>
@@ -24,6 +24,12 @@
             <td><span id="productQuantity"></span></td>
         </tr>
     </table>
+    <p>Total Inventory Value: <span id="totalInventoryValue"></span></p>
+    <p>
+        Remove Product by ID:
+        <input type="number" name="removeID">
+        <button type="button" onclick="removeProduct">Remove</button>
+    </p>
     
     <script src="./script.js"></script>
 </body>
