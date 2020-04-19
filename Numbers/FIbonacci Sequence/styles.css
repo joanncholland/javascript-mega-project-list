@@ -15,7 +15,8 @@ body {
     align-items: center;
 }
 
-#form input, button {
+#form input,
+button {
     margin: 5px;
 }
 
@@ -28,13 +29,13 @@ body {
     text-align: center;
 }
 
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
 /* Firefox */
-
 input[type=number] {
     -moz-appearance: textfield;
 }
@@ -45,13 +46,11 @@ input[type=number] {
     padding: 10px 30px 10px 30px;
     font-size: 1rem;
 }
-
 #form button:hover {
     cursor: pointer;
     background-color: black;
     color: white;
 }
-
 #form button:focus {
     outline: 0;
     box-shadow: none;
