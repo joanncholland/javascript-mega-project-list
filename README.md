@@ -26,3 +26,6 @@ A simple program that allows you to enter how many significant digits of e you w
 <img alt="Screenshot of Find e to the Nth Digit" src="https://github.com/joanncholland/javascript-projects/blob/master/Assets/Screenshots/fibonacci-sequence-result.png">
 </p>
 A simple program that allows you to enter the nth Fibonacci sequence number you want to see and displays the result. It uses a recursive algorithm to calculate the chosen nth Fibonacci number.
+
+## Sorting
+An implementation two sorting algorithms, one for merge sort and the other for bubble sort, both using recursion. Both print out the sorted array to the console - might add user input and output result to the page later.
