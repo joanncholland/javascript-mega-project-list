@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find PI to the Nth Digit</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    
+    <h1>Find PI to the Nth Digit</h1>
+    <p>
+        Enter a number between 1 and 48, then click 'Submit'
+    </p>
+    <p id="form">
+        <input type="number" autofocus='autofocus' name="n-value" id="n-value">
+        <button onclick="getUserInput()">Submit</button>
+    </p id="form">
+    <p>
+        Result will show below
+    </p>
+    <p>
+        <span id="result"></span>
+    </p>
+
     <script src="./script.js"></script>
 </body>
+
 </html>
