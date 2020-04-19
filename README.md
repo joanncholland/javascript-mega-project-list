@@ -1,6 +1,14 @@
 # Javascript Projects
 A collation of all my JS projects, from beginner to advanced. My implementations of some of the ideas found in the Mega Project List: https://github.com/karan/Projects.
 
+## Table of Contents
+### Numbers
+1. [Find PI to the Nth Digit](https://github.com/joanncholland/javascript-mega-project-list#find-e-to-the-nth-digit)
+2. [Find e to the Nth Digit](https://github.com/joanncholland/javascript-mega-project-list#find-e-to-the-nth-digit)
+3. [Fibonacci Sequence](https://github.com/joanncholland/javascript-mega-project-list#fibonacci-sequence)
+
+
+
 ## Find PI to the Nth Digit
 <p align="center">
 <img alt="Screenshot of Find PI to the Nth Digit" src="https://github.com/joanncholland/javascript-projects/blob/master/Assets/Screenshots/find-pi-to-the-nth-digit-result.png">
