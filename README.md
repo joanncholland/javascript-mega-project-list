@@ -13,7 +13,7 @@ A collation of all my JS projects, from beginner to advanced. My implementations
 1. [Fizz Buzz](https://github.com/joanncholland/javascript-mega-project-list#sortingfizz-buzz)
 
 
-## Number
+## Numbers
 ### Find PI to the Nth Digit
 <p align="center">
 <img alt="Screenshot of Find PI to the Nth Digit" src="https://github.com/joanncholland/javascript-projects/blob/master/Assets/Screenshots/find-pi-to-the-nth-digit-result.png">
