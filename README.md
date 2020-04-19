@@ -12,6 +12,9 @@ A collation of all my JS projects, from beginner to advanced. My implementations
 ### Text
 1. [Fizz Buzz](https://github.com/joanncholland/javascript-mega-project-list#fizz-buzz)
 
+### Classes
+1. [Product Inventory Project](https://github.com/joanncholland/javascript-mega-project-list#product-inventory-project)
+
 
 ## Numbers
 ### Find PI to the Nth Digit
@@ -42,3 +45,7 @@ An implementation two sorting algorithms, one for merge sort and the other for b
 A simple program, that returns an array with "Fizz" in place of multiples of three,  
 "Buzz" in place of multiples of five, and the number otherwise. The user can enter 
 the length of the array they'd like to see, from 1 to 100.
+
+## Classes
+### Product Inventory Project
+This program keeps track of product inventory. It's implemented using classes in JavaScript.
