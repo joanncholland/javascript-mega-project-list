@@ -10,7 +10,7 @@ A collation of all my JS projects, from beginner to advanced. My implementations
 1. [Sorting](https://github.com/joanncholland/javascript-mega-project-list#sorting)
 
 ### Text
-1. [Fizz Buzz](https://github.com/joanncholland/javascript-mega-project-list#sortingfizz-buzz)
+1. [Fizz Buzz](https://github.com/joanncholland/javascript-mega-project-list#fizz-buzz)
 
 
 ## Numbers
