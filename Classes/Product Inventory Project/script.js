@@ -1,5 +1,12 @@
-// product class, with price, id, and quantity on hand
+/** Class representing a product. */
 class Product {
+    /**
+     * Create a product.
+     * @param {int} id - The product id.
+     * @param {string} name - The product name.
+     * @param {int} price - The product price.
+     * @param {int} quantity - The product quantity.
+     */
     constructor(id, name, price, quantity) {
         this.id = id
         this.name = name
@@ -7,47 +14,146 @@ class Product {
         this.quantity = quantity
     }
 
+    /**
+     * Get the product id value.
+     * @return {int} The product id value.
+     */
     get productId() {
         return this.id
     }
 
+    /**
+     * Set the product id value.
+     * @param {int} id - The new product id.
+     */
     set productId(id) {
         this.id = id
     }
 
+    /**
+     * Get the product name value.
+     * @return {string} The product name value.
+     */
     get productName() {
         return this.name
     }
 
+    /**
+     * Set the product name value.
+     * @param {string} name - The new product name.
+     */
     set productName(name) {
         this.name = name
     }
 
+    /**
+     * Get the product price value.
+     * @return {int} The product price value.
+     */
     get productPrice() {
         return this.price
     }
 
+    /**
+    * Set the product price value.
+    * @param {int} price - The new product price.
+    */
     set productPrice(price) {
         this.price = price
     }
 
+    /**
+    * Get the product quantity value.
+    * @return {int} The product quantity value.
+    */
     get productQuantity() {
         return this.quantity
     }
 
+    /**
+    * Set the product quantity value.
+    * @param {int} quantity - The new product quantity.
+    */
     set productQuantity(quantity) {
         this.quantity = quantity
     }
 
+}
+
+/** Class representing the inventory. */
+class Inventory {
+    /**
+     * Create an inventory.
+     */
+    constructor() {
+        this.products = []
+    }
+
+    /**
+     * Get the products in the inventory.
+     * @return {array} The products.
+     */
+    get products() {
+        return this.products
+    }
+
+    /**
+     * Set the products in the inventory.
+     * @param {array} products - The products for the inventory.
+     */
+    set products(products) {
+        for (let i = 0; i < products.length; i++) {
+            this.products.push(products[i])
+        }
+
+    }
+
+    /**
+     * A function to get the total inventory value.
+     * @return {int} The inventory value.
+     */
+    getInventoryValue() {
+        let value = 0
+        for (let i = 0; i < products.length; i++) {
+            value += products[i].price
+        }
+        return value
+    }
+
+    stringifyInventory() {
+        return JSON.stringify(products)
+    }
 
 }
 
-// document.getElementById('productId').innerHTML = myproduct.id
-// document.getElementById('productName').innerHTML = myproduct.name
-// document.getElementById('productPrice').innerHTML = '£' + myproduct.price.toFixed(2)
-// document.getElementById('productQuantity').innerHTML = myproduct.quantity
-
-
+/**
+ * A function that detects if localStorage is supported in the browser.
+ * @param {type} type - The type of localStorage browser object.
+ */
+function storageAvailable(type) {
+    var storage;
+    try {
+        storage = window[type];
+        var x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
+    }
+    catch (e) {
+        return e instanceof DOMException && (
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            (storage && storage.length !== 0);
+    }
+}
 
 // create array of products
 let products = [
@@ -61,12 +167,39 @@ let products = [
     new Product(8, 'Watermelon', 1.00, 20)
 ]
 
-function addToDOM(products) {
-    let table = document.getElementById('inventoryTable')
+/**
+ * Check if local storage is supported in the browser.
+ * If it is, add the product items in products to the 
+ * local storage.
+ */
+if (storageAvailable('localStorage')) {
+    // localStorage available
+    console.log('Local storage can be used in this browser!')
 
-    let rowNumber = 1
+    // Populate localStorage with some Product objects
     for (let i = 0; i < products.length; i++) {
-        let row = table.insertRow(rowNumber)
+        // Make sure to store the Product objects in JSON format, for retrievability
+        localStorage.setItem(i, JSON.stringify(products[i]))
+    }
+}
+else {
+    // localStorage not available
+    console.log('Local storage isn\'t available in this browser...')
+}
+
+/**
+ * A function to add the products in the products array to
+ * local storage.
+ */
+function addLocalStorageProducts() {
+    for (let i = 0; i < products.length; i++) {
+        // Parse JSON
+        let product = JSON.parse(localStorage.getItem(i))
+        
+        // Add the product to the table
+        let table = document.getElementById('inventoryTable')
+
+        let row = table.insertRow(table.rows.length-1)
 
         let cell1 = row.insertCell(0)
         let cell2 = row.insertCell(1)
@@ -78,46 +211,37 @@ function addToDOM(products) {
         cell3.innerHTML = '£' + products[i].price.toFixed(2)
         cell4.innerHTML = products[i].quantity
     }
-
 }
+addLocalStorageProducts()
 
-addToDOM(products)
-
-// inventory class, keeps track of various products and can sum up the inventory value
-class Inventory {
-    constructor() {
-        this.products = []
-    }
-
-    get products() {
-        return this.products
-    }
-
-    set products(products) {
-        for (let i = 0; i < products.length; i++) {
-            this.products.push(products[i])
-        }
-
-    }
-
-    getInventoryValue() {
-        let value = 0
-        for (let i = 0; i < products.length; i++) {
-            value += products[i].price
-        }
-        return value
-    }
-
-    removeProduct(productId) {
-        
-    }
-
-}
-
+// Initialise a new Inventory object, and set the products
 inventory = new Inventory(products)
-
+jsonObj = inventory.stringifyInventory()
+console.log(jsonObj)
+jsonParse = JSON.parse(jsonObj)
+console.log(jsonParse)
+// localStorage.setItem('inventory', inventory)
+// Add the total inventory cost to the DOM, using the getInventoryValue function
 document.getElementById('totalInventoryValue').innerHTML = '£' + inventory.getInventoryValue().toFixed(2)
 
-function remove() {
+/**
+ * The following code would normally go into the Inventory class,
+ * however local storage is being used to save and alter the 
+ * product objects, rather than a database. 
+ */
+// Add a product to the products in local storage
+function addProduct() {
+
+}
+
+function removeProduct() {
+
+}
+
+function editProduct() {
+
+}
+
+function soldProduct() {
 
 }

@@ -48,4 +48,7 @@ the length of the array they'd like to see, from 1 to 100.
 
 ## Classes
 ### Product Inventory Project
-This program keeps track of product inventory. It's implemented using classes in JavaScript.
+<p align="center">
+<img alt="Screenshot of Find e to the Nth Digit" src="https://github.com/joanncholland/javascript-projects/blob/master/Assets/Screenshots/product-inventory-project.png">
+</p>
+This program keeps track of product inventory. It's implemented using ES5 classes in JavaScript, and uses local storage to store and load the products. I'll implement adding, removing, and updating products at some point.
