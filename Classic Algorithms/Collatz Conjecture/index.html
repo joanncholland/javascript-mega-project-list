@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collatz Conjecture</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Collatz Conjecture</h1>
+    <p>Enter the number for the Collatz Conjecture algorithm, and click 'Calculate'.</p>
+    <form onsubmit="return false">
+    <input type="number" id="nValue" autofocus="autofocus" placeholder="Enter number">
+    <button type="submit" onclick="showResult()">Calculate</button>
+</form>
+    <ul id="resultCalculation"></ul>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

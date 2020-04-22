@@ -8,6 +8,7 @@ A collation of all my JS projects, from beginner to advanced. My implementations
 3. [Fibonacci Sequence](https://github.com/joanncholland/javascript-mega-project-list#fibonacci-sequence)
 ### Classic Algorithms
 1. [Sorting](https://github.com/joanncholland/javascript-mega-project-list#sorting)
+2. [Collatz Conjecture](https://github.com/joanncholland/javascript-mega-project-list#collatz-conjecture)
 
 ### Text
 1. [Fizz Buzz](https://github.com/joanncholland/javascript-mega-project-list#fizz-buzz)
@@ -39,6 +40,9 @@ A simple program that allows you to enter the nth Fibonacci sequence number you 
 ## Classic Algorithms
 ### Sorting
 An implementation two sorting algorithms, one for merge sort and the other for bubble sort, both using recursion. Both print out the sorted array to the console - might add user input and output result to the page later.
+
+### Collatz Conjecture
+A simple program that allows the user to enter the number they'd like to perform the Collatz Conjecture algorithm on. It uses a recursive algorithm and displays the calculation step by step to reach 1.
 
 ## Text
 ### Fizz Buzz
