@@ -12,6 +12,7 @@ A collation of all my JS projects, from beginner to advanced. My implementations
 
 ### Text
 1. [Fizz Buzz](https://github.com/joanncholland/javascript-mega-project-list#fizz-buzz)
+2. [Pig Latin](https://github.com/joanncholland/javascript-mega-project-list#pig-latin)
 
 ### Classes
 1. [Product Inventory Project](https://github.com/joanncholland/javascript-mega-project-list#product-inventory-project)
@@ -49,6 +50,9 @@ A simple program that allows the user to enter the number they'd like to perform
 A simple program, that returns an array with "Fizz" in place of multiples of three,  
 "Buzz" in place of multiples of five, and the number otherwise. The user can enter 
 the length of the array they'd like to see, from 1 to 100.
+
+### Pig Latin
+A simple program that converts some user input text into Pig Latin. It uses regular expressions to apply the Pig Latin rules to the words.
 
 ## Classes
 ### Product Inventory Project
