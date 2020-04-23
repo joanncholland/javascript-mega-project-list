@@ -7,3 +7,7 @@ body {
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+ul, ol li {
+    padding: 0%;
+}
