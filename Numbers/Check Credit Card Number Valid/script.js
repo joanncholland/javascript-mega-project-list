@@ -1,5 +1,3 @@
-console.log("connected");
-
 function check() {
   const ccnums = document.getElementById("ccnum").value.split("");
   const resultSpan = document.getElementById("result");
