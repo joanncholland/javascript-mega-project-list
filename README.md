@@ -9,7 +9,7 @@ A collation of all my JS projects, from beginner to advanced. My implementations
 1. [Find PI to the Nth Digit](https://github.com/joanncholland/javascript-mega-project-list#find-e-to-the-nth-digit)
 2. [Find e to the Nth Digit](https://github.com/joanncholland/javascript-mega-project-list#find-e-to-the-nth-digit)
 3. [Fibonacci Sequence](https://github.com/joanncholland/javascript-mega-project-list#fibonacci-sequence)
-4. [Credit Card Validator](https://github.com/joanncholland/javascript-mega-project-list#check-credit-card-number-valid)
+4. [Credit Card Validator](https://github.com/joanncholland/javascript-mega-project-list#credit-card-validator)
 
 ### Classic Algorithms
 
